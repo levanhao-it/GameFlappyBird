@@ -65,3 +65,4 @@ target/*
 .vscode/*
 
 src/main/java/code/module-info.java
+/bin/
