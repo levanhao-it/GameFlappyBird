@@ -3,6 +3,8 @@ package model;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 
+import view.Main;
+
 public abstract class Bird {
 	protected int x, y;
 	protected Animation animation;
@@ -30,7 +32,7 @@ public abstract class Bird {
 		int centerX=this.x+animation.getCurrentImage().getWidth(null)/2;
 		int centerY= this.y+animation.getCurrentImage().getHeight(null)/2;
 		g2d.rotate(Math.toRadians(degree),centerX,centerY);
-		g2d.drawImage(animation.getCurrentImage, x, y, null);
+		g2d.drawImage(animation.getCurrentImage(), x, y, null);
 	}
 	
 	protected void update (long elpaseTime) {
@@ -39,7 +41,7 @@ public abstract class Bird {
 		if(dy==BOUNCE) degree=ROTATE_UP;
 		else {
 			if(dy==FALL) {
-				degree=(degree<ROTATE_DOWN_MAX)? degree+= ROTATE:0
+				degree=(degree<ROTATE_DOWN_MAX)? degree+= ROTATE:0;
 			}
 		}
 	}
