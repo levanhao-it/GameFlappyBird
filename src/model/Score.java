@@ -48,6 +48,25 @@ public class Score {
 			}
 		}
 	}
+	
+	public String medal(int score) {
+		String medal = "";
+		if (score <= 10) {
+			medal = "Bronze.png";
+
+		} else {
+			if (score > 10 && score <= 20) {
+				medal = "Silver.png";
+			} else {
+				if (score > 20 && score <= 30) {
+					medal = "Gold.png";
+				} else {
+					medal = "Platinummedal.png";
+				}
+			}
+		}
+		return medal;
+	}
 
 	public int getScore() {
 		return score;

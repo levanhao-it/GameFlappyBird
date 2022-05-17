@@ -170,17 +170,17 @@ public class Model {
 		if (this.bird.died(obstacles)) {
 			Sound.HIT.play();
 			score.addScore(scoreD);
-			// String medal = score.medal(scoreD);
-			// ImageIcon image = new ImageIcon(Loader.loadImage(medal));
-			// int op = JOptionPane.showConfirmDialog(null,
-			// 		"YOUR SCORE: " + scoreD + "\n" + "BEST: " + score.read() + "\n" + "AGAIN?", "menu",
-			// 		JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, image);
+			String medal = score.medal(scoreD);
+			ImageIcon image = new ImageIcon(Loader.loadImage(medal));
+			int op = JOptionPane.showConfirmDialog(null,
+			"YOUR SCORE: " + scoreD + "\n" + "BEST: " + score.read() + "\n" + "AGAIN?", "menu",
+			JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, image);
 
-			// if (op == JOptionPane.YES_NO_OPTION) {
-			// 	replay();
-			// } else {
-			// 	System.exit(0);
-			// }
+			if (op == JOptionPane.YES_NO_OPTION) {
+			 	replay();
+			 } else {
+			 	System.exit(0);
+			}
 		}
 	}
 
