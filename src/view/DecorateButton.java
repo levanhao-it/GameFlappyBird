@@ -5,6 +5,10 @@ import java.awt.BorderLayout;
 import javax.swing.AbstractButton;
 
 public class DecorateButton extends AbstractButton {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	AbstractButton button;
 
 	public DecorateButton(AbstractButton c) {

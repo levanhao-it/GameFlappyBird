@@ -29,7 +29,7 @@ public class StartGame extends JFrame {
 		listButton.add(btnExit);
 		
 		add(label);
-		setSize(1024, 576);
+		setSize(1024, 610);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);

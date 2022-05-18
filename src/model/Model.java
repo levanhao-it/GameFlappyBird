@@ -40,41 +40,7 @@ public class Model {
 
 	public void update() {
 		stateGame.update(this);
-//		 ground1.update();
-//		 sky1.update();
-//		 ground2.update();
-//		 sky2.update();
-//		 this.bird.update(1);
-//		 if (playing) {
-//		 ob.addObstacle(obstacles);
-//		
-//		 }
-//		
-//		
-//		 for (int i = 0; i < obstacles.size(); i++) {
-//		 Obstacle obs = obstacles.get(i);
-//		 if (obs.getX() + obs.getWidth() < 0) {
-//		
-//		 obstacles.remove(i);
-//		
-//		 } else {
-//		
-//		 obs.update();
-//		
-//		
-//		
-//		 if (obs.getX() == this.bird.getX() - 24) {
-//		
-//		
-//		
-//		
-//		 scoreD++;
-//		 Sound.CORE.play();
-//		
-//		 }
-//		 }
-//		
-//		 }
+		
 
 	}
 
@@ -155,9 +121,9 @@ public class Model {
 
 		g.setColor(Color.RED);
 		g.setFont(new Font("", Font.BOLD, 40));
-		g.drawString("Bestscore: " + Score.read(), 20, 40);
+		g.drawString("Best Score: " + Score.read(), 20, 40);
 
-		g.setColor(Color.yellow);
+		g.setColor(Color.WHITE);
 		g.setFont(new Font("", Font.BOLD, 40));
 
 		g.drawString("" + scoreD, Main.WIDTH / 2 - 15, 50);

@@ -8,9 +8,9 @@ public class BirdFactory {
 		int random=sc.nextInt(4);
 		switch (random) {
 		case 1:
-			return new Bird3();
-		case 2:
 			return new Bird2();
+		case 2:
+			return new Bird3();
 		case 3:
 			return new Bird4();
 		default:

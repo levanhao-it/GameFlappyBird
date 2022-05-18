@@ -9,6 +9,10 @@ import javax.swing.ImageIcon;
 import model.Loader;
 
 public class ImageGame extends DecorateButton{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int numButton;
 	public static final int IMG_PLAY = 1;
 	public static final int IMG_EXIT = 5;
@@ -28,7 +32,7 @@ public class ImageGame extends DecorateButton{
 			button.setContentAreaFilled(false);
 			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
 			
-			setBounds(350, 370, 110, 58);
+			setBounds(410, 370, 170, 60);
 			break;
 
 		case 5:
@@ -37,11 +41,14 @@ public class ImageGame extends DecorateButton{
 			button.setBorderPainted(false);
 			button.setContentAreaFilled(false);
 			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
-			setBounds(130, 510, 110, 58);
+			setBounds(410, 510, 175, 60);
 
 			break;
 		}
 		
+	}
+	public int getNumButton() {
+		return numButton;
 	}
 
 }
