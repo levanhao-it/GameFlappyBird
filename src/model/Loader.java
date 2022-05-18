@@ -1,24 +1,19 @@
 package model;
-
 /**
  * Cần một đối tượng làm nhiệm vụ tải ảnh lên từ src ảnh;
  */
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
-
 /**
  * Object: Loader;
- * 
  * @author phamdinhhoc
  *
  */
 public class Loader {
-	private static Loader loader = new Loader();
-
+	private static  Loader loader=new Loader() ;
 	/**
 	 * Tải ảnh lên từ src ảnh;
-	 * 
 	 * @param filename
 	 * @return
 	 */
@@ -30,5 +25,5 @@ public class Loader {
 		}
 		return null;
 	}
-
+	
 }

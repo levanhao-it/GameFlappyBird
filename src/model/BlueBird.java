@@ -1,6 +1,6 @@
 package model;
 
-public class BlueBird extends Bird {
+public class BlueBird extends Bird{
 
 	@Override
 	public void addFrame() {
@@ -8,5 +8,7 @@ public class BlueBird extends Bird {
 		animation.addFrame("bl1.png", 15);
 		animation.addFrame("bl2.png", 15);
 		animation.addFrame("bl3.png", 15);
+		
 	}
+
 }

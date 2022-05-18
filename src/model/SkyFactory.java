@@ -7,12 +7,12 @@ public class SkyFactory {
 		Random sc = new Random();
 		int random = sc.nextInt(3);
 		switch (random) {
-			case 1:
-				return new DaySky();
-			case 2:
-				return new NightSky();
-			default:
-				return new DefaultSky();
+		case 1:
+			return new DaySky();
+		case 2:
+			return new NightSky();
+		default:
+			return new DefaultSky();
 		}
 	}
 

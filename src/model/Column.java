@@ -1,5 +1,4 @@
 package model;
-
 /**
  * Cần 1 đối tượng để:
  * 	+ Khởi tạo đồng thời: Cột Trên + Cột Dưới;
@@ -7,13 +6,11 @@ package model;
  */
 import java.awt.Graphics2D;
 import java.awt.Image;
-
 /**
  * Object: Column;
- * Properties:
- * + Cần 2 tham sô để phân việt: cột trên + cột dưới;
- * + Cần 2 biến int để lưu trữ tọa độ của 1 cột;
- * 
+ * Properties: 
+ * 		+ Cần 2 tham sô để phân việt: cột trên + cột dưới;
+ * 		+ Cần 2 biến int để lưu trữ tọa độ của 1 cột;
  * @author phamdinhhoc
  *
  */
@@ -23,7 +20,6 @@ public class Column {
 	private int x;
 	private int y;
 	private Image image;
-
 	/**
 	 * 
 	 * @param x
@@ -34,7 +30,7 @@ public class Column {
 		this.x = x;
 		this.y = y;
 		if (type == 1) {
-			image = Loader.loadImage("columnBot.png");
+			image=Loader.loadImage("columnBot.png");
 		} else if (type == 2) {
 			image = Loader.loadImage("columnTop.png");
 		}
@@ -57,7 +53,6 @@ public class Column {
 
 	/**
 	 * Getter/setter
-	 * 
 	 * @return
 	 */
 	public int getX() {

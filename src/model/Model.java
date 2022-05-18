@@ -4,8 +4,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
 import view.Main;
 
 public class Model {
@@ -14,7 +16,6 @@ public class Model {
 	private BackGround ground2;
 	private BackGround sky2;
 	private Sky sky;
-
 	public Sky getSky() {
 		return sky;
 	}
@@ -26,7 +27,7 @@ public class Model {
 	private Bird bird;
 	private Score score;
 	private Obstacle ob;
-	private StateGame stateGame; // trang thai game
+	private StateGame stateGame; //trang thai game
 
 	int scoreD = 0;
 	int bestScore;
@@ -35,11 +36,11 @@ public class Model {
 
 	public Model() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		// sky1 = new BackGround(0, BackGround.SKY);
+//		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+//		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
 		new SkyFactory();
-		sky = SkyFactory.createSky();
+		sky= SkyFactory.createSky();
 		new BirdFactory();
 		bird = BirdFactory.createBird();
 		score = new Score();
@@ -51,6 +52,7 @@ public class Model {
 
 	public void update() {
 		stateGame.update(this);
+		
 
 	}
 
@@ -120,20 +122,20 @@ public class Model {
 
 	public void draw(Graphics2D g) {
 
-		// sky1.draw(g);
-		// sky2.draw(g);
+//		sky1.draw(g);
+//		sky2.draw(g);
 		sky.draw(g);
 		for (int i = 0; i < obstacles.size(); i++) {
 			obstacles.get(i).draw(g);
 
 		}
-
+		
 		ground1.draw(g);
 		ground2.draw(g);
 
-		g.setColor(Color.RED);
-		g.setFont(new Font("", Font.BOLD, 40));
-		g.drawString("Best Score: " + Score.read(), 20, 40);
+		g.setColor(Color.WHITE);
+		g.setFont(new Font("", Font.BOLD, 32));
+		g.drawString("High score: " + Score.read(), 20, 40);
 
 		g.setColor(Color.WHITE);
 		g.setFont(new Font("", Font.BOLD, 40));
@@ -151,23 +153,23 @@ public class Model {
 			String medal = score.medal(scoreD);
 			ImageIcon image = new ImageIcon(Loader.loadImage(medal));
 			int op = JOptionPane.showConfirmDialog(null,
-					"YOUR SCORE: " + scoreD + "\n" + "BEST: " + Score.read() + "\n" + "AGAIN?", "menu",
-					JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, image);
+			"YOUR SCORE: " + scoreD + "\n" + "BEST: " + Score.read() + "\n" + "AGAIN?", "menu",
+			JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, image);
 
 			if (op == JOptionPane.YES_NO_OPTION) {
-				replay();
-			} else {
-				System.exit(0);
+			 	replay();
+			 } else {
+			 	System.exit(0);
 			}
 		}
 	}
 
 	private void replay() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		// sky1 = new BackGround(0, BackGround.SKY);
+//		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		this.sky = new SkyFactory().createSky();
+//		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+		this.sky= new SkyFactory().createSky();
 		new BirdFactory();
 		this.bird = BirdFactory.createBird();
 		score = new Score();
@@ -210,10 +212,14 @@ public class Model {
 	public void setPlaying() {
 		if (playing) {
 			this.playing = false;
+			
+			
+			
 
 		} else {
 			this.playing = true;
 			this.setStateGame(new StatePlay());
+			
 
 		}
 	}
