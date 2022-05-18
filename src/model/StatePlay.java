@@ -6,9 +6,10 @@ public class StatePlay implements StateGame {
 	public void update(Model game) {
 		
 		game.getGround1().update();
-		game.getSky1().update();
+//		game.getSky1().update();
 		game.getGround2().update();
-		game.getSky2().update();
+//		game.getSky2().update();
+		game.getSky().update();
 
 		game.getBird().update(1);
 		

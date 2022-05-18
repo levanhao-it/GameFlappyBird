@@ -20,10 +20,10 @@ public class BackGround {
 			y = Main.HEIGHT - image.getHeight(null);
 			this.speedX=SPEED;
 		} else {
-			if (type == SKY) {
-				image = Loader.loadImage("backgroundgame.png");
-				speedX=SPEED/2;
-			}
+//			if (type == SKY) {
+//				image = Loader.loadImage("backgroundgame.png");
+//				speedX=SPEED/2;
+//			}
 		}
 	}
 

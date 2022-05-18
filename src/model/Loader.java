@@ -18,7 +18,12 @@ public class Loader {
 	 * @return
 	 */
 	public static Image loadImage(String filename) {
-		return new ImageIcon(loader.getClass().getResource("/images/" + filename)).getImage();
+		try {
+			return new ImageIcon(loader.getClass().getResource("/images/" + filename)).getImage();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
 	}
 	
 }

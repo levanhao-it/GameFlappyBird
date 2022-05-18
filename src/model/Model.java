@@ -15,6 +15,15 @@ public class Model {
 	private BackGround sky1;
 	private BackGround ground2;
 	private BackGround sky2;
+	private Sky sky;
+	public Sky getSky() {
+		return sky;
+	}
+
+	public void setSky(Sky sky) {
+		this.sky = sky;
+	}
+
 	private Bird bird;
 	private Score score;
 	private Obstacle ob;
@@ -27,9 +36,11 @@ public class Model {
 
 	public Model() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		sky1 = new BackGround(0, BackGround.SKY);
+//		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+//		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+		new SkyFactory();
+		sky= SkyFactory.createSky();
 		new BirdFactory();
 		bird = BirdFactory.createBird();
 		score = new Score();
@@ -111,12 +122,14 @@ public class Model {
 
 	public void draw(Graphics2D g) {
 
-		sky1.draw(g);
-		sky2.draw(g);
+//		sky1.draw(g);
+//		sky2.draw(g);
+		sky.draw(g);
 		for (int i = 0; i < obstacles.size(); i++) {
 			obstacles.get(i).draw(g);
 
 		}
+		
 		ground1.draw(g);
 		ground2.draw(g);
 
@@ -153,9 +166,10 @@ public class Model {
 
 	private void replay() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		sky1 = new BackGround(0, BackGround.SKY);
+//		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+//		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
+		this.sky= new SkyFactory().createSky();
 		new BirdFactory();
 		this.bird = BirdFactory.createBird();
 		score = new Score();
