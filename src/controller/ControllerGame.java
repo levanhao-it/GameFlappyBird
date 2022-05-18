@@ -69,12 +69,24 @@ public class ControllerGame implements Runnable,KeyListener,MouseListener{
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
+		if (e.getKeyCode() == 32) {
+			if (!model.isPlaying()) {
+
+				model.setPlaying();
+			}
+			model.getBird().setFly(Bird.BOUNCE);
+			Sound.FLAP.play();
+		}
+		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+			model.changeState();
+		}
 		
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
+		model.getBird().setFly(Bird.FALL);
 		
 	}
 

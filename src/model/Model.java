@@ -18,7 +18,7 @@ public class Model {
 	private Bird bird;
 	private Score score;
 	private Obstacle ob;
-	private StateGame stateGame;//trang thai game
+	private StateGame stateGame; //trang thai game
 
 	int scoreD = 0;
 	int bestScore;
@@ -30,7 +30,8 @@ public class Model {
 		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		bird = new BirdFactory().birdFactory();
+		new BirdFactory();
+		bird = BirdFactory.createBird();
 		score = new Score();
 		ob = new Obstacle();
 		obstacles = new ArrayList<>();
@@ -139,7 +140,7 @@ public class Model {
 			String medal = score.medal(scoreD);
 			ImageIcon image = new ImageIcon(Loader.loadImage(medal));
 			int op = JOptionPane.showConfirmDialog(null,
-			"YOUR SCORE: " + scoreD + "\n" + "BEST: " + score.read() + "\n" + "AGAIN?", "menu",
+			"YOUR SCORE: " + scoreD + "\n" + "BEST: " + Score.read() + "\n" + "AGAIN?", "menu",
 			JOptionPane.OK_OPTION, JOptionPane.QUESTION_MESSAGE, image);
 
 			if (op == JOptionPane.YES_NO_OPTION) {
@@ -155,7 +156,8 @@ public class Model {
 		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		this.bird = new BirdFactory().birdFactory();
+		new BirdFactory();
+		this.bird = BirdFactory.createBird();
 		score = new Score();
 		scoreD = 0;
 		setPlaying();

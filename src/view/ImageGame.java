@@ -15,7 +15,11 @@ public class ImageGame extends DecorateButton{
 	private static final long serialVersionUID = 1L;
 	private int numButton;
 	public static final int IMG_PLAY = 1;
+	public static final int IMG_RANK = 2;
+	public static final int IMG_GUIDE = 3;
+	public static final int IMG_ABOUT = 4;
 	public static final int IMG_EXIT = 5;
+	
 	
 	public ImageGame(AbstractButton c, int numButton) {
 		super(c);
@@ -32,7 +36,34 @@ public class ImageGame extends DecorateButton{
 			button.setContentAreaFilled(false);
 			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
 			
-			setBounds(410, 370, 170, 60);
+			setBounds(410, 270, 170, 60);
+			break;
+		case 2:
+			button.setIcon(new ImageIcon(Loader.loadImage("rank.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			
+			setBounds(410, 330, 170, 60);
+			break;
+		case 3:
+			button.setIcon(new ImageIcon(Loader.loadImage("guide.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			
+			setBounds(410,390, 170, 60);
+			break;
+		case 4:
+			button.setIcon(new ImageIcon(Loader.loadImage("about.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			
+			setBounds(410, 450, 190, 75);
 			break;
 
 		case 5:

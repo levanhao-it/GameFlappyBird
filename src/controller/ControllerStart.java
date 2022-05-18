@@ -35,13 +35,13 @@ public class ControllerStart {
 
 			button.getBtn().addMouseListener(new MouseAdapter() {
 				public void mouseEntered(MouseEvent e) {
-					button.setBounds(405, 365, 198, 68);
+					button.setBounds(405, 265, 198, 68);
 					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play11.png")));
 				}
 
 				public void mouseExited(MouseEvent e) {
 
-					button.setBounds(410, 370, 170, 60);
+					button.setBounds(410, 270, 170, 60);
 					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play1.png")));
 
 				}
@@ -50,6 +50,72 @@ public class ControllerStart {
 					new ControllerGame().startGame();
 					;
 					view.setVisible(false);
+
+				}
+
+			});
+			break;
+		case 2:
+
+			button.getBtn().addMouseListener(new MouseAdapter() {
+				public void mouseEntered(MouseEvent e) {
+					button.setBounds(405, 325, 198, 68);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("rank1.png")));
+				}
+
+				public void mouseExited(MouseEvent e) {
+
+					button.setBounds(410, 330, 170, 60);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("rank.png")));
+
+				}
+
+				public void mouseClicked(MouseEvent e) {
+					
+
+				}
+
+			});
+			break;
+		case 3:
+
+			button.getBtn().addMouseListener(new MouseAdapter() {
+				public void mouseEntered(MouseEvent e) {
+					button.setBounds(405, 385, 198, 68);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("guide1.png")));
+				}
+
+				public void mouseExited(MouseEvent e) {
+
+					button.setBounds(410, 380, 180, 70);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("guide.png")));
+
+				}
+
+				public void mouseClicked(MouseEvent e) {
+					
+
+				}
+
+			});
+			break;
+		case 4:
+
+			button.getBtn().addMouseListener(new MouseAdapter() {
+				public void mouseEntered(MouseEvent e) {
+					button.setBounds(405, 445, 198, 68);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("about1.png")));
+				}
+
+				public void mouseExited(MouseEvent e) {
+
+					button.setBounds(410, 450, 170, 60);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("about.png")));
+
+				}
+
+				public void mouseClicked(MouseEvent e) {
+					
 
 				}
 

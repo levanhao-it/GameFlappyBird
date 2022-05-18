@@ -7,15 +7,15 @@ import java.util.Random;
 import view.Main;
 
 public class Obstacle {
-	public static final int SPACE_BOT_TOP = 100, SPACE_TWO_OBSTACLE = 200;
-	private Column columnBot;
+	public static final int SPACE_BOT_TOP = 150, SPACE_TWO_OBSTACLE = 200;
+	private Column columnBottom;
 	private Column columnTop;
 	private int distance;
 	private final int[] y_Values = { 0, -50, -100, -150, -200 };
 
 	public Obstacle(int x, int y) {
 		columnTop = new Column(x, y, 2);
-		columnBot = new Column(x, y + columnTop.getHeight() + SPACE_BOT_TOP, 1);
+		columnBottom = new Column(x, y + columnTop.getHeight() + SPACE_BOT_TOP, 1);
 
 	}
 
@@ -24,12 +24,12 @@ public class Obstacle {
 
 	public void draw(Graphics2D g2d) {
 		columnTop.draw(g2d);
-		columnBot.draw(g2d);
+		columnBottom.draw(g2d);
 	}
 
 	public void update() {
 		columnTop.update();
-		columnBot.update();
+		columnBottom.update();
 	}
 
 	public int getWidth() {
@@ -46,7 +46,7 @@ public class Obstacle {
 		int height = bird.getHeight();
 		if ((xHv + height >= getX()) && (xHv <= getX() + getWidth())) {
 			if ((yHv <= this.columnTop.getY() + this.columnTop.getHeight()) || 
-					(yHv + height >= this.columnBot.getY())) {
+					(yHv + height >= this.columnBottom.getY())) {
 				return true;
 			}
 		}
