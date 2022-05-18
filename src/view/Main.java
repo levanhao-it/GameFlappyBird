@@ -12,8 +12,8 @@ public class Main extends JFrame {
 
 	GameView game;
 
-	public static final int WIDTH =800, HEIGHT = 512;
-	
+	public static final int WIDTH = 800, HEIGHT = 512;
+
 	public Main() {
 		// TODO Auto-generated constructor stub
 		game = new GameView();
@@ -26,10 +26,9 @@ public class Main extends JFrame {
 		this.setVisible(true);
 		this.setLocationRelativeTo(null);
 	}
-	
+
 	public GameView getGame() {
 		return game;
 	}
-
 
 }

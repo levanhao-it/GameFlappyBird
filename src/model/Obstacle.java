@@ -45,7 +45,7 @@ public class Obstacle {
 		int yHv = bird.getY();
 		int height = bird.getHeight();
 		if ((xHv + height >= getX()) && (xHv <= getX() + getWidth())) {
-			if ((yHv <= this.columnTop.getY() + this.columnTop.getHeight()) || 
+			if ((yHv <= this.columnTop.getY() + this.columnTop.getHeight()) ||
 					(yHv + height >= this.columnBottom.getY())) {
 				return true;
 			}
@@ -54,13 +54,11 @@ public class Obstacle {
 	}
 
 	public void addObstacle(ArrayList<Obstacle> obstacles) {
-	
+
 		if (distance < Obstacle.SPACE_TWO_OBSTACLE) {
 			distance += BackGround.SPEED;
 		} else {
 			obstacles.add(new Obstacle(Main.WIDTH, y_Values[new Random().nextInt(5)]));
-		
-			
 			distance -= Obstacle.SPACE_TWO_OBSTACLE;
 		}
 	}

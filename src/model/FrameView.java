@@ -1,11 +1,14 @@
 package model;
+
 /**
  * Cần đối tượng khởi tạo: Bức ảnh chỉ xuấn hiện trong một khoảng thời gian.
  */
 import java.awt.Image;
+
 /**
  * Object: FrameView;
  * Properties: Bức ảnh (Image), Khoảng thời xuấn hiện (time);
+ * 
  * @author phamdinhhoc
  *
  */
@@ -15,6 +18,7 @@ public class FrameView {
 
 	/**
 	 * Khởi tạo Bức ảnh chỉ xuấn hiện trong một khoảng thời gian.
+	 * 
 	 * @param image
 	 * @param time
 	 */
@@ -26,6 +30,7 @@ public class FrameView {
 
 	/**
 	 * Getter/Setter
+	 * 
 	 * @return
 	 */
 	public Image getImage() {

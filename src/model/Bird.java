@@ -10,37 +10,39 @@ public abstract class Bird {
 	protected Animation animation;
 	public static final int BOUNCE = -7;
 	public static final int FALL = 3;
-	public static final int ROTATE =2, ROTATE_UP=-30,ROTATE_DOWN_MAX=80;
-	
+	public static final int ROTATE = 2, ROTATE_UP = -30, ROTATE_DOWN_MAX = 80;
+
 	public int dy;
 	public int degree;
-	
+
 	public abstract void addFrame();
-	
+
 	protected Bird() {
-		x= Main.WIDTH/3;
-		y= Main.HEIGHT/2;
-		animation =new Animation();
+		x = Main.WIDTH / 3;
+		y = Main.HEIGHT / 2;
+		animation = new Animation();
 		addFrame();
 	}
-	
+
 	public void draw(Graphics2D g2d) {
-		int centerX=this.x+animation.getCurrentImage().getWidth(null)/2;
-		int centerY= this.y+animation.getCurrentImage().getHeight(null)/2;
-		g2d.rotate(Math.toRadians(degree),centerX,centerY);
+		int centerX = this.x + animation.getCurrentImage().getWidth(null) / 2;
+		int centerY = this.y + animation.getCurrentImage().getHeight(null) / 2;
+		g2d.rotate(Math.toRadians(degree), centerX, centerY);
 		g2d.drawImage(animation.getCurrentImage(), x, y, null);
 	}
-	
-	protected void update (long elpaseTime) {
+
+	protected void update(long elpaseTime) {
 		animation.update(elpaseTime);
-		y+=dy;
-		if(dy==BOUNCE) degree=ROTATE_UP;
+		y += dy;
+		if (dy == BOUNCE)
+			degree = ROTATE_UP;
 		else {
-			if(dy==FALL) {
-				degree=(degree<ROTATE_DOWN_MAX)? degree+= ROTATE:0;
+			if (dy == FALL) {
+				degree = (degree < ROTATE_DOWN_MAX) ? degree += ROTATE : 0;
 			}
 		}
 	}
+
 	public void setFly(int speed) {
 		this.dy = speed;
 	}
@@ -74,5 +76,4 @@ public abstract class Bird {
 		return y;
 	}
 
-	
 }

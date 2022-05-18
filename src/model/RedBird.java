@@ -1,6 +1,6 @@
 package model;
 
-public class RedBird extends Bird{
+public class RedBird extends Bird {
 
 	@Override
 	public void addFrame() {
