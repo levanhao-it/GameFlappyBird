@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Random;
-
 public class SkyFactory {
 	// public static Sky createSky() {
 	// Random sc = new Random();
@@ -15,9 +13,9 @@ public class SkyFactory {
 	// return new DefaultSky();
 	// }
 	// }
-	private static Sky sky;
+	private static  Sky sky;
 
-	public static Sky createSky(String type) {
+	public static  Sky createSky(String type) {
 		if (type.equals("morning"))
 			sky = new DaySky();
 		else if (type.equals("night"))
