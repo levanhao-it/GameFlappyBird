@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import controller.ControllerStart;
 import view.Main;
 
 public class Model {
@@ -136,11 +137,12 @@ public class Model {
 		ground2.draw(g);
 
 		g.setColor(Color.WHITE);
-		g.setFont(new Font("", Font.BOLD, 32));
+		g.setFont(new Font("", Font.BOLD, 28));
 		g.drawString("High score: " + Score.read(), 20, 40);
 
-		g.setColor(Color.WHITE);
+		g.setColor(Color.YELLOW);
 		g.setFont(new Font("", Font.BOLD, 40));
+	
 
 		g.drawString("" + scoreD, Main.WIDTH / 2 - 15, 50);
 
@@ -162,6 +164,7 @@ public class Model {
 				replay();
 			} else {
 				System.exit(0);
+//				new ControllerStart();
 			}
 		}
 	}

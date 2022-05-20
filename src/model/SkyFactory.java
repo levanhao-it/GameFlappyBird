@@ -20,8 +20,6 @@ public class SkyFactory {
 			sky = new DaySky();
 		else if (type.equals("night"))
 			sky = new NightSky();
-		else if (type.equals("default"))
-			sky = new DefaultSky();
 		return sky;
 	}
 
