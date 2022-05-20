@@ -99,6 +99,30 @@ public class ControllerSky {
 
 			});
 			break;
+		case 8:
+
+			button.getBtn().addMouseListener(new MouseAdapter() {
+				public void mouseEntered(MouseEvent e) {
+					button.setBounds(405, 445, 175, 60);
+					;
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
+				}
+
+				public void mouseExited(MouseEvent e) {
+
+					button.setBounds(410, 450, 175, 60);
+					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
+
+				}
+
+				public void mouseClicked(MouseEvent e) {
+
+					new ControllerStart();
+					
+				}
+
+			});
+			break;
 		}
 	}
 
