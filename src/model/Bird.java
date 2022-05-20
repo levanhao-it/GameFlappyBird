@@ -15,6 +15,10 @@ public abstract class Bird {
 	public int dy;
 	public int degree;
 	
+	protected String link1= new String();
+	protected String link2= new String();
+	protected String link3= new String();
+	
 	public abstract void addFrame();
 	
 	protected Bird() {

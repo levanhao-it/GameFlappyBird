@@ -19,6 +19,11 @@ public class ImageGame extends DecorateButton{
 	public static final int IMG_GUIDE = 3;
 	public static final int IMG_ABOUT = 4;
 	public static final int IMG_EXIT = 5;
+	public static final int IMG_START1=6;
+	public static final int IMG_START2=7;
+	public static final int IMG_BACK=8;
+	public static final int IMG_MORNING=9;
+	public static final int IMG_NIGHT=10;
 	
 	
 	public ImageGame(AbstractButton c, int numButton) {
@@ -73,6 +78,51 @@ public class ImageGame extends DecorateButton{
 			button.setContentAreaFilled(false);
 			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
 			setBounds(410, 510, 175, 60);
+
+			break;
+		case 6:
+			button.setIcon(new ImageIcon(Loader.loadImage("play1.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			setBounds(100, 400, 175, 60);
+
+			break;
+		case 7:
+			button.setIcon(new ImageIcon(Loader.loadImage("play1.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			setBounds(710, 400, 175, 60);
+
+			break;
+		case 8:
+			button.setIcon(new ImageIcon(Loader.loadImage("back.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			setBounds(410, 450, 175, 60);
+
+			break;
+		case 9:
+			button.setIcon(new ImageIcon(Loader.loadImage("sky.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			setBounds(70, 130, 250, 250);
+
+			break;
+		case 10:
+			button.setIcon(new ImageIcon(Loader.loadImage("nightSKy.png")));
+			button.setMargin(new Insets(0, 0, 0, 0));
+			button.setBorderPainted(false);
+			button.setContentAreaFilled(false);
+			button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
+			setBounds(670, 130, 250, 250);
 
 			break;
 		}

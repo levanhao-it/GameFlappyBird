@@ -49,10 +49,7 @@ public class ControllerStart {
 
 					public void mouseClicked(MouseEvent e) {
 						// ControllerGame.getInstance().startGame();
-						if (ControllerGame.getInstance() == null) {
-							new ControllerGame();
-						}
-						view.setVisible(false);
+						new ControllerSky(view);
 
 					}
 
@@ -116,7 +113,7 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-						new SkyBackground(view);
+						
 					}
 
 				});

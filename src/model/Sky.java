@@ -10,10 +10,10 @@ public abstract class Sky {
 
 	public Sky() {
 		// TODO Auto-generated constructor stub
-		x = 0;
-		y = 0;
-		x1 = x + 1024;
-		y1 = 1;
+		x=0;
+		y=0;
+		x1= x+1023;
+		y1=1;
 		createBird();
 	}
 
@@ -23,18 +23,17 @@ public abstract class Sky {
 	}
 
 	public void update() {
-		x -= 2;
-		x1 -= 2;
-		if (x1 < 0) {
-			x = x1 + 1024;
-		}
-		if (x < 0) {
-			x1 = x + 1024;
-		}
-	}
-
-	public int getYGround() {
-		return y;
-	}
+		  x-= 2;
+		  x1-= 2;
+		  if(x1<0) {
+			  x= x1+1023;
+		  }
+		  if(x<0) {
+			  x1= x+1023;
+		  }
+	  }
+	  public int getYGround() {
+		  return y;
+	  }
 
 }
