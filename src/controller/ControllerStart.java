@@ -8,7 +8,6 @@ import javax.swing.JOptionPane;
 
 import model.Loader;
 import view.ImageGame;
-import view.SkyBackground;
 import view.StartGame;
 
 public class ControllerStart {

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-import controller.ControllerStart;
 import view.Main;
 
 public class Model {
@@ -44,7 +43,7 @@ public class Model {
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
 		// new SkyFactory();
-		sky = factory.createSky(styleSky);
+		// sky = factory.createSky(styleSky);
 		new BirdFactory();
 		bird = BirdFactory.createBird();
 		score = new Score();
@@ -142,7 +141,6 @@ public class Model {
 
 		g.setColor(Color.YELLOW);
 		g.setFont(new Font("", Font.BOLD, 40));
-	
 
 		g.drawString("" + scoreD, Main.WIDTH / 2 - 15, 50);
 
@@ -164,7 +162,7 @@ public class Model {
 				replay();
 			} else {
 				System.exit(0);
-//				new ControllerStart();
+				// new ControllerStart();
 			}
 		}
 	}
@@ -174,9 +172,7 @@ public class Model {
 		// sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-
 		this.sky = factory.createSky(styleSky);
-		// paintSky(this.styleSky).draw(g2);;
 
 		new BirdFactory();
 		this.bird = BirdFactory.createBird();
@@ -232,6 +228,7 @@ public class Model {
 		return playing;
 	}
 
+	// Pause
 	boolean pause = false;
 
 	public void changeState() {
@@ -252,7 +249,6 @@ public class Model {
 	public void setStyleSky(String styleSky) {
 		this.styleSky = styleSky;
 		sky = factory.createSky(styleSky);
-		System.out.println(this.styleSky);
 	}
 
 }
