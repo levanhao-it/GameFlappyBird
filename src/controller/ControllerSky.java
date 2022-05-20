@@ -9,18 +9,18 @@ import model.Loader;
 import model.Model;
 import view.ImageGame;
 import view.SkyBackground;
-import view.StartGame;
+import view.MenuGame;
 
 public class ControllerSky {
 	SkyBackground skyBackground;
 	Model model;
-	StartGame startGame;
+	MenuGame startGame;
 
-	public ControllerSky(StartGame startGame) {
+	public ControllerSky(MenuGame startGame) {
 		// TODO Auto-generated constructor stub
 		super();
 		this.skyBackground = new SkyBackground();
-		this.startGame= startGame;
+		this.startGame = startGame;
 		action();
 	}
 
@@ -34,95 +34,96 @@ public class ControllerSky {
 
 	private void setButtonAction(ImageGame button) {
 		// TODO Auto-generated method stub
+
 		switch (button.getNumButton()) {
-		case 6:
+			case 6:
 
-			button.getBtn().addMouseListener(new MouseAdapter() {
-				public void mouseEntered(MouseEvent e) {
-					button.setBounds(95, 395, 175, 60);
-					;
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play11.png")));
-				}
+				button.getBtn().addMouseListener(new MouseAdapter() {
+					public void mouseEntered(MouseEvent e) {
+						button.setBounds(95, 395, 175, 60);
 
-				public void mouseExited(MouseEvent e) {
-
-					button.setBounds(100, 400, 175, 60);
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play1.png")));
-
-				}
-
-				public void mouseClicked(MouseEvent e) {
-
-					if (ControllerGame.getInstance() == null) {
-						ControllerGame controllerGame = new ControllerGame();
-						controllerGame.model.setStyleSky("morning");
-						controllerGame.startGame();
-					} else {
-						ControllerGame.getInstance().model.setStyleSky("morning");
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play11.png")));
 					}
-					skyBackground.setVisible(false);
-					startGame.setVisible(false);
 
-				}
+					public void mouseExited(MouseEvent e) {
 
-			});
-			break;
-		case 7:
+						button.setBounds(100, 400, 175, 60);
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play1.png")));
 
-			button.getBtn().addMouseListener(new MouseAdapter() {
-				public void mouseEntered(MouseEvent e) {
-					button.setBounds(705, 395, 175, 60);
-					;
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play11.png")));
-				}
-
-				public void mouseExited(MouseEvent e) {
-
-					button.setBounds(710, 400, 175, 60);
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play1.png")));
-
-				}
-
-				public void mouseClicked(MouseEvent e) {
-
-					if (ControllerGame.getInstance() == null) {
-						ControllerGame controllerGame = new ControllerGame();
-						controllerGame.model.setStyleSky("night");
-						controllerGame.startGame();
-					} else {
-						ControllerGame.getInstance().model.setStyleSky("night");
 					}
-					skyBackground.setVisible(false);
-					startGame.setVisible(false);
-					
-				}
 
-			});
-			break;
-		case 8:
+					public void mouseClicked(MouseEvent e) {
 
-			button.getBtn().addMouseListener(new MouseAdapter() {
-				public void mouseEntered(MouseEvent e) {
-					button.setBounds(405, 445, 175, 60);
-					;
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
-				}
+						if (ControllerGame.getInstance() == null) {
+							ControllerGame controllerGame = new ControllerGame();
+							controllerGame.model.setStyleSky("morning");
+							controllerGame.startGame();
+						} else {
+							ControllerGame.getInstance().model.setStyleSky("morning");
+						}
+						skyBackground.setVisible(false);
+						startGame.setVisible(false);
 
-				public void mouseExited(MouseEvent e) {
+					}
 
-					button.setBounds(410, 450, 175, 60);
-					button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
+				});
+				break;
+			case 7:
 
-				}
+				button.getBtn().addMouseListener(new MouseAdapter() {
+					public void mouseEntered(MouseEvent e) {
+						button.setBounds(705, 395, 175, 60);
 
-				public void mouseClicked(MouseEvent e) {
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play11.png")));
+					}
 
-					new ControllerStart();
-					
-				}
+					public void mouseExited(MouseEvent e) {
 
-			});
-			break;
+						button.setBounds(710, 400, 175, 60);
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("play1.png")));
+
+					}
+
+					public void mouseClicked(MouseEvent e) {
+
+						if (ControllerGame.getInstance() == null) {
+							ControllerGame controllerGame = new ControllerGame();
+							controllerGame.model.setStyleSky("night");
+							controllerGame.startGame();
+						} else {
+							ControllerGame.getInstance().model.setStyleSky("night");
+						}
+						skyBackground.setVisible(false);
+						startGame.setVisible(false);
+
+					}
+
+				});
+				break;
+			case 8:
+
+				button.getBtn().addMouseListener(new MouseAdapter() {
+					public void mouseEntered(MouseEvent e) {
+						button.setBounds(405, 445, 175, 60);
+
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
+					}
+
+					public void mouseExited(MouseEvent e) {
+
+						button.setBounds(410, 450, 175, 60);
+						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
+
+					}
+
+					public void mouseClicked(MouseEvent e) {
+
+						new ControllerStart();
+
+					}
+
+				});
+				break;
 		}
 	}
 

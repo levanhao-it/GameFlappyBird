@@ -48,7 +48,7 @@ public class Score {
 			}
 		}
 	}
-	
+
 	public String medal(int score) {
 		String medal = "";
 		if (score <= 10) {

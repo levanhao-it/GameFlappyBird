@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 
 import model.Loader;
 
-public class StartGame extends JFrame {
+public class MenuGame extends JFrame {
 
 	/**
 	 * 
@@ -17,7 +17,7 @@ public class StartGame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	ArrayList<ImageGame> listButton = new ArrayList<>();
 
-	public StartGame() {
+	public MenuGame() {
 		// TODO Auto-generated constructor stub
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(Loader.loadImage("startgame.png")));
@@ -47,10 +47,9 @@ public class StartGame extends JFrame {
 		return listButton;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new StartGame();
-
-	}
+	// public static void main(String[] args) {
+	// 	// TODO Auto-generated method stub
+	// 	new StartGame();
+	// }
 
 }

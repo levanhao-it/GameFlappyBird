@@ -8,15 +8,15 @@ import javax.swing.JOptionPane;
 
 import model.Loader;
 import view.ImageGame;
-import view.StartGame;
+import view.MenuGame;
 
 public class ControllerStart {
-	StartGame view;
+	MenuGame view;
 
 	public ControllerStart() {
 		// TODO Auto-generated constructor stub
 		super();
-		this.view = new StartGame();
+		this.view = new MenuGame();
 		action();
 	}
 
@@ -112,7 +112,7 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-						
+
 					}
 
 				});

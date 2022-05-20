@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import controller.ControllerStart;
 import view.Main;
 
 public class Model {
@@ -18,6 +19,7 @@ public class Model {
 	private Sky sky;
 	private String styleSky = "default";
 	private SkyFactory factory;
+	boolean pause = false;
 
 	public Sky getSky() {
 		return sky;
@@ -42,8 +44,7 @@ public class Model {
 		// sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		// new SkyFactory();
-		// sky = factory.createSky(styleSky);
+		sky = factory.createSky(styleSky);
 		new BirdFactory();
 		bird = BirdFactory.createBird();
 		score = new Score();
@@ -228,14 +229,11 @@ public class Model {
 		return playing;
 	}
 
-	// Pause
-	boolean pause = false;
-
+	// Pause game
 	public void changeState() {
 		if (!pause) {
 			this.setStateGame(new StatePause());
 			pause = true;
-
 		} else {
 			this.setStateGame(new StatePlay());
 			pause = false;
