@@ -10,6 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import controller.ControllerGame;
 import controller.ControllerStart;
 import model.Model;;
 
@@ -18,9 +19,11 @@ public class SkyBackground extends JFrame {
 	Font font = new Font("Times New Roman", Font.PLAIN, 60);
 	Font normalFont = new Font("Georgia", Font.PLAIN, 20);
 	Model flappyBird;
+	StartGame view;
 
-	public SkyBackground() {
+	public SkyBackground(StartGame view) {
 
+		this.view = view;
 		// jframe
 		setSize(800, 600);
 		setLayout(null);
@@ -90,9 +93,18 @@ public class SkyBackground extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				flappyBird = new Model();
-				flappyBird.setStyleSky("morning");
-				flappyBird.getStyleSky();
+				// flappyBird = new Model();
+				// flappyBird.setStyleSky("morning");
+				// flappyBird.getStyleSky();
+				// setVisible(false);
+				if (ControllerGame.getInstance() == null) {
+					ControllerGame controllerGame = new ControllerGame();
+					controllerGame.model.setStyleSky("morning");
+					controllerGame.startGame();
+				} else {
+					ControllerGame.getInstance().model.setStyleSky("morning");
+				}
+				view.setVisible(false);
 				setVisible(false);
 
 			}
@@ -102,11 +114,19 @@ public class SkyBackground extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				flappyBird = new Model();
-				flappyBird.setStyleSky("night");
-				flappyBird.getStyleSky();
+				// flappyBird = new Model();
+				// flappyBird.setStyleSky("night");
+				// flappyBird.getStyleSky();
+				// setVisible(false);
+				if (ControllerGame.getInstance() == null) {
+					ControllerGame controllerGame = new ControllerGame();
+					controllerGame.model.setStyleSky("night");
+					controllerGame.startGame();
+				} else {
+					ControllerGame.getInstance().model.setStyleSky("night");
+				}
+				view.setVisible(false);
 				setVisible(false);
-
 			}
 		});
 
