@@ -9,23 +9,22 @@ import javax.swing.JOptionPane;
 import model.Loader;
 import view.ImageGame;
 import view.SkyBackground;
-import view.StartGame;
 
-public class ControllerStart {
-	StartGame view;
+public class ControllerBackGround {
+	SkyBackground background;
 
-	public ControllerStart() {
+	public ControllerBackGround() {
 		// TODO Auto-generated constructor stub
 		super();
-		this.view = new StartGame();
+		this.background = new SkyBackground();
 		action();
 	}
 
 	private void action() {
 		// TODO Auto-generated method stub
-		for (ImageGame button : view.getListBtn()) {
-			setButtonAction(button);
-		}
+		// for (ImageGame button : view.getListBtn()) {
+		// setButtonAction(button);
+		// }
 
 	}
 
@@ -48,9 +47,9 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-						new ControllerGame().startGame();
-						;
-						view.setVisible(false);
+						// new ControllerGame().startGame();
+						new SkyBackground();
+						// view.setVisible(false);
 
 					}
 
@@ -114,7 +113,7 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-						new SkyBackground();
+
 						// window.setVisible(false);
 					}
 

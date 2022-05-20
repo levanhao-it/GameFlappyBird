@@ -13,13 +13,13 @@ import javax.swing.JLabel;
 import controller.ControllerStart;
 import model.Model;;
 
-public class Settings extends JFrame {
+public class SkyBackground extends JFrame {
 
 	Font font = new Font("Times New Roman", Font.PLAIN, 60);
 	Font normalFont = new Font("Georgia", Font.PLAIN, 20);
 	Model flappyBird;
 
-	public Settings() {
+	public SkyBackground() {
 
 		// jframe
 		setSize(800, 600);
@@ -92,6 +92,7 @@ public class Settings extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				flappyBird = new Model();
 				flappyBird.setStyleSky("morning");
+				flappyBird.getStyleSky();
 				setVisible(false);
 
 			}
@@ -103,6 +104,7 @@ public class Settings extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				flappyBird = new Model();
 				flappyBird.setStyleSky("night");
+				flappyBird.getStyleSky();
 				setVisible(false);
 
 			}

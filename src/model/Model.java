@@ -16,7 +16,8 @@ public class Model {
 	private BackGround ground2;
 	private BackGround sky2;
 	private Sky sky;
-	private String styleSky = "morning";
+	private String styleSky = "night";
+	private SkyFactory factory;
 
 	public Sky getSky() {
 		return sky;
@@ -170,7 +171,10 @@ public class Model {
 		// sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		this.sky = new SkyFactory().createSky(styleSky);
+
+		this.sky = factory.createSky(styleSky);
+		// paintSky(this.styleSky).draw(g2);;
+
 		new BirdFactory();
 		this.bird = BirdFactory.createBird();
 		score = new Score();
@@ -244,6 +248,7 @@ public class Model {
 
 	public void setStyleSky(String styleSky) {
 		this.styleSky = styleSky;
+		System.out.println(this.styleSky);
 	}
 
 }
