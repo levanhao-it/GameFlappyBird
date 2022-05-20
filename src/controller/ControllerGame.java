@@ -79,6 +79,7 @@ public class ControllerGame implements Runnable, KeyListener, MouseListener {
 			model.getBird().setFly(Bird.BOUNCE);
 			Sound.FLAP.play();
 		}
+		// Pasue
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			model.changeState();
 		}
