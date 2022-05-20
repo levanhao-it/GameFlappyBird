@@ -117,7 +117,7 @@ public class ImageGame extends DecorateButton{
 
 			break;
 		case 10:
-			button.setIcon(new ImageIcon(Loader.loadImage("nightSKy.png")));
+			button.setIcon(new ImageIcon(Loader.loadImage("nightOption.png")));
 			button.setMargin(new Insets(0, 0, 0, 0));
 			button.setBorderPainted(false);
 			button.setContentAreaFilled(false);
