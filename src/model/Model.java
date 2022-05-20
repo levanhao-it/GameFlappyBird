@@ -16,6 +16,8 @@ public class Model {
 	private BackGround ground2;
 	private BackGround sky2;
 	private Sky sky;
+	private SkyFactory skyFactory;
+	private String styleSky = "default";
 	public Sky getSky() {
 		return sky;
 	}
@@ -40,7 +42,7 @@ public class Model {
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 //		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
 		new SkyFactory();
-		sky= SkyFactory.createSky();
+		sky= SkyFactory.createSky(styleSky);
 		new BirdFactory();
 		bird = BirdFactory.createBird();
 		score = new Score();
@@ -169,7 +171,7 @@ public class Model {
 //		sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
 //		sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
-		this.sky= new SkyFactory().createSky();
+		this.sky= new SkyFactory().createSky(styleSky);
 		new BirdFactory();
 		this.bird = BirdFactory.createBird();
 		score = new Score();
