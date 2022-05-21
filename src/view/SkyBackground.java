@@ -48,9 +48,9 @@ public class SkyBackground extends JFrame {
 		return listButton;
 	}
 
-	// public static void main(String[] args) {
-	// 	// TODO Auto-generated method stub
-	// 	new SkyBackground();
-	// }
+	 public static void main(String[] args) {
+	 	// TODO Auto-generated method stub
+	 	new SkyBackground();
+	 }
 
 }

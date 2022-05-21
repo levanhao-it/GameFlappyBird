@@ -13,6 +13,7 @@ import view.Main;
 public class ControllerGame implements Runnable, KeyListener, MouseListener {
 	public Model model;
 	public Main view;
+	
 	private static ControllerGame instance;
 
 	public ControllerGame() {
@@ -79,9 +80,16 @@ public class ControllerGame implements Runnable, KeyListener, MouseListener {
 			model.getBird().setFly(Bird.BOUNCE);
 			Sound.FLAP.play();
 		}
-		// Pasue
+		// Pause
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			model.changeState();
+			if(model.isPause()==true) {
+				// do
+			}
+			else {
+				// do
+				
+			}
 		}
 
 	}

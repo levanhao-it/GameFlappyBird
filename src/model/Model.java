@@ -13,9 +13,7 @@ import view.Main;
 
 public class Model {
 	private BackGround ground1;
-	private BackGround sky1;
 	private BackGround ground2;
-	private BackGround sky2;
 	private Sky sky;
 	private String styleSky = "default";
 	private SkyFactory factory;
@@ -41,9 +39,7 @@ public class Model {
 
 	public Model() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		// sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
 		sky = factory.createSky(styleSky);
 		new BirdFactory();
 		bird = BirdFactory.createBird();
@@ -103,16 +99,8 @@ public class Model {
 		this.ground1 = ground1;
 	}
 
-	public void setSky1(BackGround sky1) {
-		this.sky1 = sky1;
-	}
-
 	public void setGround2(BackGround ground2) {
 		this.ground2 = ground2;
-	}
-
-	public void setSky2(BackGround sky2) {
-		this.sky2 = sky2;
 	}
 
 	public void setScore(Score score) {
@@ -124,9 +112,6 @@ public class Model {
 	}
 
 	public void draw(Graphics2D g) {
-
-		// sky1.draw(g);
-		// sky2.draw(g);
 		sky.draw(g);
 		for (int i = 0; i < obstacles.size(); i++) {
 			obstacles.get(i).draw(g);
@@ -170,9 +155,7 @@ public class Model {
 
 	private void replay() {
 		ground1 = new BackGround(0, BackGround.GROUND);
-		// sky1 = new BackGround(0, BackGround.SKY);
 		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
-		// sky2 = new BackGround(sky1.getWidth(), BackGround.SKY);
 		this.sky = factory.createSky(styleSky);
 
 		new BirdFactory();
@@ -190,16 +173,8 @@ public class Model {
 		return ground1;
 	}
 
-	public BackGround getSky1() {
-		return sky1;
-	}
-
 	public BackGround getGround2() {
 		return ground2;
-	}
-
-	public BackGround getSky2() {
-		return sky2;
 	}
 
 	public Bird getBird() {
@@ -248,5 +223,11 @@ public class Model {
 		this.styleSky = styleSky;
 		sky = factory.createSky(styleSky);
 	}
+
+	public boolean isPause() {
+		return pause;
+	}
+	
+	
 
 }

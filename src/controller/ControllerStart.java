@@ -49,6 +49,7 @@ public class ControllerStart {
 					public void mouseClicked(MouseEvent e) {
 						// ControllerGame.getInstance().startGame();
 						new ControllerSky(view);
+						view.setVisible(false);
 
 					}
 
@@ -91,7 +92,8 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-
+						new ControllerGuide(view);
+						view.setVisible(false);
 					}
 
 				});
@@ -112,7 +114,8 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-
+						new ControllerAbout(view);
+						view.setVisible(false);
 					}
 
 				});
