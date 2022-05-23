@@ -6,23 +6,17 @@ import java.awt.Image;
 import view.Main;
 
 public class BackGround {
-	public static final int GROUND = 1, SKY = 2, SPEED = 2;
+	public static final int SPEED = 2;
 	private int x, y;
 	private Image image;
 	private int speedX;
 
-	public BackGround(int x, int type) {
+	public BackGround(int x) {
 		this.x = x;
-		if (type == GROUND) {
-			image = Loader.loadImage("ground.png");
-			y = Main.HEIGHT - image.getHeight(null);
-			this.speedX = SPEED;
-		} else {
-			// if (type == SKY) {
-			// image = Loader.loadImage("backgroundgame.png");
-			// speedX=SPEED/2;
-			// }
-		}
+		image = Loader.loadImage("ground.png");
+		y = Main.HEIGHT - image.getHeight(null);
+		this.speedX = SPEED;
+
 	}
 
 	public void draw(Graphics2D g2d) {

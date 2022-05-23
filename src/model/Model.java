@@ -38,8 +38,8 @@ public class Model {
 	ArrayList<Obstacle> obstacles;
 
 	public Model() {
-		ground1 = new BackGround(0, BackGround.GROUND);
-		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
+		ground1 = new BackGround(0);
+		ground2 = new BackGround(ground1.getWidth());
 		sky = factory.createSky(styleSky);
 		new BirdFactory();
 		bird = BirdFactory.createBird();
@@ -154,8 +154,8 @@ public class Model {
 	}
 
 	private void replay() {
-		ground1 = new BackGround(0, BackGround.GROUND);
-		ground2 = new BackGround(ground1.getWidth(), BackGround.GROUND);
+		ground1 = new BackGround(0);
+		ground2 = new BackGround(ground1.getWidth());
 		this.sky = factory.createSky(styleSky);
 
 		new BirdFactory();
@@ -227,7 +227,5 @@ public class Model {
 	public boolean isPause() {
 		return pause;
 	}
-	
-	
 
 }
