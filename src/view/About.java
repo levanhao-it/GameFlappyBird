@@ -39,8 +39,8 @@ public class About extends JFrame{
 	public ArrayList<ImageGame> getListBtn() {
 		return listButton;
 	}
-	public static void main(String[] args) {
-		new About();
-	}
+	// public static void main(String[] args) {
+	// 	new About();
+	// }
 
 }

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import java.awt.Image;
 
 import view.Main;
 
@@ -16,6 +17,7 @@ public class Model {
 	private Sky sky;
 	private String styleSky = "default";
 	private SkyFactory factory;
+	private Image playButton = new ImageIcon("src/images/play-button.png").getImage();
 	boolean pause = false;
 
 	public Sky getSky() {
@@ -126,10 +128,14 @@ public class Model {
 
 		g.setFont(new Font("", Font.BOLD, 28));
 		g.drawString("Pause: " + pause, 20, 70);
+		if (pause == true) {
+			g.drawImage(playButton, Main.WIDTH / 2, Main.HEIGHT / 2, null);
+		} else {
+			g.drawImage(null, Main.WIDTH / 2, Main.HEIGHT / 2, null);
+		}
 
 		g.setColor(Color.YELLOW);
 		g.setFont(new Font("", Font.BOLD, 40));
-
 		g.drawString("" + scoreD, Main.WIDTH / 2 - 15, 50);
 
 		this.bird.draw(g);
