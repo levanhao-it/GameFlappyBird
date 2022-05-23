@@ -6,7 +6,7 @@ import java.awt.Image;
 public abstract class Sky {
 	private int x, y, x1, y1;
 
-	public abstract Image createBird();
+	public abstract Image createSky();
 
 	public Sky() {
 		// TODO Auto-generated constructor stub
@@ -14,12 +14,12 @@ public abstract class Sky {
 		y = 0;
 		x1 = x + 1023;
 		y1 = 1;
-		createBird();
+		createSky();
 	}
 
 	public void draw(Graphics2D g2) {
-		g2.drawImage(createBird(), x, y, null);
-		g2.drawImage(createBird(), x1, y1, null);
+		g2.drawImage(createSky(), x, y, null);
+		g2.drawImage(createSky(), x1, y1, null);
 	}
 
 	public void update() {
