@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-import controller.ControllerStart;
 import view.Main;
 
 public class Model {
@@ -139,6 +138,9 @@ public class Model {
 		g.setColor(Color.WHITE);
 		g.setFont(new Font("", Font.BOLD, 28));
 		g.drawString("High score: " + Score.read(), 20, 40);
+
+		g.setFont(new Font("", Font.BOLD, 28));
+		g.drawString("Pause: " + pause, 20, 70);
 
 		g.setColor(Color.YELLOW);
 		g.setFont(new Font("", Font.BOLD, 40));
