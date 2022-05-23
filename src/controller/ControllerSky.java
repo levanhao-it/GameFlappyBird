@@ -104,14 +104,14 @@ public class ControllerSky {
 
 				button.getBtn().addMouseListener(new MouseAdapter() {
 					public void mouseEntered(MouseEvent e) {
-						button.setBounds(10, 10, 200, 65);
+						button.setBounds(415,515, 200, 65);
 
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
 					}
 
 					public void mouseExited(MouseEvent e) {
 
-						button.setBounds(0, 0, 175, 60);
+						button.setBounds(420, 520, 175, 60);
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
 
 					}

@@ -39,8 +39,8 @@ public class Guide extends JFrame{
 	public ArrayList<ImageGame> getListBtn() {
 		return listButton;
 	}
-	// public static void main(String[] args) {
-	// 	new Guide();
-	// }
+	 public static void main(String[] args) {
+	 	new Guide();
+	 }
 
 }
