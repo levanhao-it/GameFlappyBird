@@ -30,5 +30,16 @@ public class Sound {
 			e.printStackTrace();
 		}
 	}
+	public void stop() {
+		try {
+			new Thread() {
+				public void run() {
+					sound.stop();
+				}
+			}.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 }

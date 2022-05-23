@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 import model.Loader;
+import model.Sound;
 import view.ImageGame;
 import view.MenuGame;
 
@@ -18,6 +19,7 @@ public class ControllerStart {
 		super();
 		this.view = new MenuGame();
 		action();
+		Sound.THEME.play();
 	}
 
 	private void action() {
@@ -49,6 +51,8 @@ public class ControllerStart {
 					public void mouseClicked(MouseEvent e) {
 						// ControllerGame.getInstance().startGame();
 						new ControllerSky(view);
+						view.setVisible(false);
+						Sound.THEME.stop();
 
 					}
 
@@ -91,7 +95,8 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-
+						new ControllerGuide(view);
+						view.setVisible(false);
 					}
 
 				});
@@ -112,7 +117,8 @@ public class ControllerStart {
 					}
 
 					public void mouseClicked(MouseEvent e) {
-
+						new ControllerAbout(view);
+						view.setVisible(false);
 					}
 
 				});

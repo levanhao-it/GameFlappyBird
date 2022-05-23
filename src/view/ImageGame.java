@@ -104,7 +104,7 @@ public class ImageGame extends DecorateButton {
 				button.setBorderPainted(false);
 				button.setContentAreaFilled(false);
 				button.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
-				setBounds(410, 450, 175, 60);
+				setBounds(0, 0, 175, 60);
 
 				break;
 			case 9:
