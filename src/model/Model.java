@@ -126,10 +126,10 @@ public class Model {
 		g.setFont(new Font("", Font.BOLD, 28));
 		g.drawString("High score: " + Score.read(), 20, 40);
 
-		g.setFont(new Font("", Font.BOLD, 28));
-		g.drawString("Pause: " + pause, 20, 70);
+//		g.setFont(new Font("", Font.BOLD, 28));
+//		g.drawString("Pause: " + pause, 20, 70);
 		if (pause == true) {
-			g.drawImage(playButton, Main.WIDTH / 2, Main.HEIGHT / 2, null);
+			g.drawImage(playButton, 380, 236, null);
 		} else {
 			g.drawImage(null, Main.WIDTH / 2, Main.HEIGHT / 2, null);
 		}
