@@ -1,5 +1,11 @@
 package view;
-
+/**
+ * Lúc bắt đầu vào game sẽ xuất hiện 1 menu, có các option:
+ * 	+ Start Game
+ * 	+ Guide;
+ * 	+ About
+ * 	+ Exit;
+ */
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -8,7 +14,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import model.Loader;
-
+/**
+ * Tạo list các button tương ứng các option trong menu;
+ * @author phamdinhhoc
+ *
+ */
 public class MenuGame extends JFrame {
 
 	/**

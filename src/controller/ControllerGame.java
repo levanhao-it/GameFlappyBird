@@ -1,5 +1,7 @@
 package controller;
-
+/**
+ * 
+ */
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -9,13 +11,20 @@ import model.Bird;
 import model.Model;
 import model.Sound;
 import view.Main;
-
+/**
+ * 
+ * @author phamdinhhoc
+ *
+ */
 public class ControllerGame implements Runnable, KeyListener, MouseListener {
 	public Model model;
 	public Main view;
 	
 	private static ControllerGame instance;
 
+	/**
+	 * 
+	 */
 	public ControllerGame() {
 		// TODO Auto-generated constructor stub
 		this.model = new Model();
