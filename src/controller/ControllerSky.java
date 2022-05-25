@@ -8,25 +8,25 @@ import javax.swing.ImageIcon;
 import model.Loader;
 import model.Model;
 import view.ImageGame;
-import view.SkyBackground;
 import view.MenuGame;
+import view.SkyBackGround;
 
 public class ControllerSky {
-	SkyBackground skyBackground;
+	SkyBackGround skyBackGround;
 	Model model;
 	MenuGame startGame;
 
 	public ControllerSky(MenuGame startGame) {
 		// TODO Auto-generated constructor stub
 		super();
-		this.skyBackground = new SkyBackground();
+		this.skyBackGround = new SkyBackGround();
 		this.startGame = startGame;
 		action();
 	}
 
 	private void action() {
 		// TODO Auto-generated method stub
-		for (ImageGame button : skyBackground.getListBtn()) {
+		for (ImageGame button : skyBackGround.getListBtn()) {
 			setButtonAction(button);
 		}
 
@@ -61,7 +61,7 @@ public class ControllerSky {
 						} else {
 							ControllerGame.getInstance().model.setStyleSky("morning");
 						}
-						skyBackground.setVisible(false);
+						skyBackGround.setVisible(false);
 						startGame.setVisible(false);
 
 					}
@@ -93,7 +93,7 @@ public class ControllerSky {
 						} else {
 							ControllerGame.getInstance().model.setStyleSky("night");
 						}
-						skyBackground.setVisible(false);
+						skyBackGround.setVisible(false);
 						startGame.setVisible(false);
 
 					}
@@ -118,7 +118,7 @@ public class ControllerSky {
 
 					public void mouseClicked(MouseEvent e) {
 						new ControllerStart();
-						skyBackground.setVisible(false);
+						skyBackGround.setVisible(false);
 						
 
 					}
