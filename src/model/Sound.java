@@ -7,7 +7,7 @@ public class Sound {
 	private AudioClip sound;
 	public static final Sound HIT = new Sound("/sound/hit.wav");
 	public static final Sound FLAP = new Sound("/sound/flap.wav");
-	public static final Sound CORE = new Sound("/sound/score.wav");
+	public static final Sound SCORE = new Sound("/sound/score.wav");
 	public static final Sound THEME = new Sound("/sound/theme.wav");
 
 	public Sound(String name) {

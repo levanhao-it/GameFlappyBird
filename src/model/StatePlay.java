@@ -26,7 +26,7 @@ public class StatePlay implements StateGame {
 				if (obs.getX() == game.getBird().getX() - 24) {
 
 					game.scoreD++;
-					Sound.CORE.play();
+					Sound.SCORE.play();
 
 				}
 			}
