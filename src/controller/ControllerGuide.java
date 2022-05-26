@@ -27,36 +27,27 @@ public class ControllerGuide {
 		for (ImageGame button : guide.getListBtn()) {
 			setButtonAction(button);
 		}
-
 	}
 
 	private void setButtonAction(ImageGame button) {
-		// TODO Auto-generated method stub
-
 		switch (button.getNumButton()) {
 			case 8:
 
 				button.getBtn().addMouseListener(new MouseAdapter() {
 					public void mouseEntered(MouseEvent e) {
 						button.setBounds(415,515, 200, 65);
-
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
 					}
 
 					public void mouseExited(MouseEvent e) {
-
 						button.setBounds(420, 520, 175, 60);
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
-
 					}
 
 					public void mouseClicked(MouseEvent e) {
 						new ControllerStart();
 						guide.setVisible(false);
-						
-
 					}
-
 				});
 				break;
 		}

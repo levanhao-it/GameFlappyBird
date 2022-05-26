@@ -2,9 +2,7 @@ package controller;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.ImageIcon;
-
 import model.Loader;
 import view.About;
 import view.ImageGame;
@@ -18,7 +16,7 @@ public class ControllerAbout {
 		// TODO Auto-generated constructor stub
 		super();
 		this.about = new About();
-		this.menuGame= startGame;
+		this.menuGame = startGame;
 		action();
 	}
 
@@ -38,23 +36,18 @@ public class ControllerAbout {
 
 				button.getBtn().addMouseListener(new MouseAdapter() {
 					public void mouseEntered(MouseEvent e) {
-						button.setBounds(415,515, 200, 65);
-
+						button.setBounds(415, 515, 200, 65);
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back1.png")));
 					}
 
 					public void mouseExited(MouseEvent e) {
-
 						button.setBounds(420, 520, 175, 60);
 						button.getBtn().setIcon(new ImageIcon(Loader.loadImage("back.png")));
-
 					}
 
 					public void mouseClicked(MouseEvent e) {
 						new ControllerStart();
 						about.setVisible(false);
-						
-
 					}
 
 				});

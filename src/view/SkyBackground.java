@@ -1,23 +1,18 @@
 package view;
-
 import java.util.ArrayList;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import model.Loader;;
+import model.Loader;
 
-public class SkyBackground extends JFrame {
+public class SkyBackGround extends JFrame{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 	ArrayList<ImageGame> listButton = new ArrayList<>();
 
-	public SkyBackground() {
+	public SkyBackGround() {
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(Loader.loadImage("mode.png")));
 		ImageGame btnStart1, btnStart2, btnBack, imgMorning, imgNight;
@@ -52,5 +47,4 @@ public class SkyBackground extends JFrame {
 	//  	// TODO Auto-generated method stub
 	//  	new SkyBackground();
 	//  }
-
 }
