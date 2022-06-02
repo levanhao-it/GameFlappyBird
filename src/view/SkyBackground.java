@@ -7,12 +7,12 @@ import javax.swing.JLabel;
 
 import model.Loader;
 
-public class SkyBackGround extends JFrame{
+public class SkyBackground extends JFrame{
 
     private static final long serialVersionUID = 1L;
 	ArrayList<ImageGame> listButton = new ArrayList<>();
 
-	public SkyBackGround() {
+	public SkyBackground() {
 		JLabel label = new JLabel();
 		label.setIcon(new ImageIcon(Loader.loadImage("mode.png")));
 		ImageGame btnStart1, btnStart2, btnBack, imgMorning, imgNight;

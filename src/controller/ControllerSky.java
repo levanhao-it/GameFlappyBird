@@ -9,17 +9,17 @@ import model.Loader;
 import model.Model;
 import view.ImageGame;
 import view.MenuGame;
-import view.SkyBackGround;
+import view.SkyBackground;
 
 public class ControllerSky {
-	SkyBackGround skyBackGround;
+	SkyBackground skyBackGround;
 	Model model;
 	MenuGame startGame;
 
 	public ControllerSky(MenuGame startGame) {
 		// TODO Auto-generated constructor stub
 		super();
-		this.skyBackGround = new SkyBackGround();
+		this.skyBackGround = new SkyBackground();
 		this.startGame = startGame;
 		action();
 	}
